@@ -5,16 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 
 </head>
-<body class="bg-blue-200">
-    <header class="text-grey-400">
-        Task List 2022
+<body class="m-10 bg-gradient-to-r from-purple-300 to-pink-500">
+    <header class="text-grey-400 font-black text-2xl">
+        <h1>Task List 2022</h1>
     </header>
     
-    <section>
-        <input type="form" placeholder="what do you have planned?">
+    <section class="max-w-fit mt-5" >
+        <input type="text" placeholder="what do you have planned?" class="w-72 rounded-md" id="text-section">
+        <button class="rounded bg-cyan-500 hover:bg-sky-500 focus:bg-sky-700 border-solid border-2 border-sky-700" id="add-list">Add List</button>
+    </section>
+    <section class="mt-6 text-xl">
+        <h2>Tasks</h2>
+        <div id="task-section">code</div>
     </section>
 
     <script src="index.js"></script>
