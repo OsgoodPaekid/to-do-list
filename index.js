@@ -1,16 +1,13 @@
-let myArr = []
 const addListButton = document.getElementById("add-list")
 const textSection = document.getElementById("text-section")
-let taskSection = document.getElementById("task-section")
+const taskSection = document.getElementById("task-section")
+const taskForm = document.getElementById("task-form")
 
-addListButton.addEventListener("click", function(){
-    myArr.push(textSection)
-    textSection.value = ""
-    localStorage.setItem("myArr", JSON.stringify("myArr"))
-    moveToHtmlInput()
-})
+taskForm.addEventListener("submit", addItem)
 
-function getInputValue(){
-    let inputValue = document.getElementById("text-Section").value;
-    alert(inputValue)
+function addItem (e){
+    e.preventDefault();
+    const taskValue = textSection.value;
+    console.log(taskValue)
+    taskValue.innerHTML = taskSection
 }

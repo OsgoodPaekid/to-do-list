@@ -10,19 +10,22 @@
 
 </head>
 <body class="m-10 bg-gradient-to-r from-purple-300 to-pink-500">
-    <header class="text-grey-400 font-black text-2xl">
-        <h1>Task List 2022</h1>
-    </header>
-    
-    <section class="max-w-fit mt-5" >
-        <input type="text" placeholder="what do you have planned?" class="w-72 rounded-md" id="text-section">
-        <button class="rounded bg-cyan-500 hover:bg-sky-500 focus:bg-sky-700 border-solid border-2 border-sky-700" id="add-list">Add List</button>
-    </section>
-    <section class="mt-6 text-xl">
-        <h2>Tasks</h2>
-        <div id="task-section">code</div>
-    </section>
-
+    <div class="shadow-2xl p-40">
+        <header class="text-grey-400 font-black text-2xl">
+            <h1>Task List 2022</h1>
+        </header>
+        
+        <section class="max-w-fit mt-5" >
+            <form id="task-form">
+                <input type="text" placeholder="what do you have planned?" class="w-72 rounded-md" id="text-section">
+                <button type="submit" class="rounded bg-cyan-500 hover:bg-sky-500 focus:bg-sky-700 border-solid border-2 border-sky-700" id="add-list">Add List</button>
+            </form>
+        </section>
+        <section class="mt-6 text-xl">
+            <h2>Tasks</h2>
+            <div id="task-section"></div>
+        </section>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
