@@ -11,14 +11,15 @@ function addItem (e){
     e.preventDefault();
     let taskValue = textSection.value;
     myArr.push(taskValue)
-    localStorage.setItem("myArr", JSON.stringify("myArr"))
+    localStorage.setItem("taskValue", textSection.value)
+    localStorage.getItem("taskValue")
     moveToHtmlInput()
 }
 
 function moveToHtmlInput(){
     let listItem = ""
     for (let i = 0; i < myArr.length; i++){
-        listItem += myArr[i] + " ";
+        listItem += `<ul>${myArr[i]}</ul>`;
     }
     taskSection.innerHTML = listItem;
 }
