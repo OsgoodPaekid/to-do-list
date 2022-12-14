@@ -16,11 +16,7 @@ function addItem (e){
     localStorage.setItem("taskValue", textSection.value)
     localStorage.getItem("taskValue")
     moveToHtmlInput()
-    // if (taskValue === ""){
-    //     setTimeout(() => {
-    //         alertSection.innerHTML = "no task entered"
-    //     }, 3000)
-    // }
+
     removeDiv()
 }
 
@@ -40,10 +36,10 @@ const storedValue = localStorage.getItem("taskValue")
 
 
 function removeDiv(){
-    let div = document.createElement("div")
-    alertSection.innerHTML = "No Task Entered"
-    document.h2.appendChild(div)
+    if (textSection.value === ""){let alertMessage = document.getElementById("alert-message");
+    alertMessage.innerHTML = "No Task Entered"
+
     setTimeout(function(){
-        div.parentNode.removeChild(div)
-    }, 2000)
+        alertMessage.innerHTML = ""
+    }, 2000)}
 }
