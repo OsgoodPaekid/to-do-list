@@ -4,6 +4,7 @@ const taskSection = document.getElementById("task-section")
 const taskForm = document.getElementById("task-form")
 const myArr = []
 const alertSection = document.getElementById("alert-section")
+const clearTasks = document.getElementById("clear-tasks")
 let editItem = false;
 
 
@@ -43,3 +44,11 @@ function removeDiv(){
         alertMessage.innerHTML = ""
     }, 2000)}
 }
+
+function clearAll(){
+    clearTasks.addEventListener("click", function(){
+        taskSection.innerHTML = ""
+    })
+}
+
+clearAll()
